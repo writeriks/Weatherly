@@ -18,7 +18,6 @@ class WeatherCell: BaseCell {
             windSpeedLabel.text = resultData.windSpeedText
             descriptionLabel.text = resultData.summaryText
             dateLabel.text = resultData.timeText
-//            print(resultData.timeText)
         }
     }
     
