@@ -32,14 +32,29 @@ struct DataViewModel {
     let timeText : String
     
     init(data:Data) {
-
+        if let sum = data.summary{
+            self.summary = sum
+        }else{self.summary = ""}
         
-        self.summary = data.summary
-        self.temperatureMax = data.temperatureMax
-        self.humidity = data.humidity
-        self.pressure = data.pressure
-        self.windSpeed = data.windSpeed
-        self.time = data.time
+        if let temp = data.temperatureMax{
+            self.temperatureMax = temp
+        }else{self.temperatureMax = 0}
+        
+        if let hum = data.humidity{
+            self.humidity = hum
+        }else{self.humidity = 0}
+        
+        if let pres = data.pressure{
+            self.pressure = pres
+        }else{self.pressure = 0}
+        
+        if let windS = data.windSpeed{
+            self.windSpeed = windS
+        }else{self.windSpeed = 0}
+        
+        if let time = data.time{
+            self.time = time
+        }else{self.time = 0}
         
         self.summaryText = self.summary
         self.temperatureMaxText = String(describing: Int(self.temperatureMax)) + " °C"
