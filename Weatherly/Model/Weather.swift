@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct Weather: Decodable {
+struct Weather: Codable {
     let timezone : String
     let daily : Daily
 }
 
-struct Daily: Decodable {
+struct Daily: Codable {
     let data : [Data]
 }
 
-struct Data: Decodable {
+struct Data: Codable {
     let summary : String
     let icon : String
     let temperatureMax : Double
