@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherCell: BaseCell {
     
-    var resultData:DataViewModel!{
+    var resultData:DailyDataViewModel!{
         didSet{
             temperatureLabel.text = resultData.temperatureMaxText
             humidityLabel.text = resultData.humidityText

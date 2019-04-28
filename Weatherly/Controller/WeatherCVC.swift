@@ -12,8 +12,8 @@ private let reuseIdentifierForWeather = "WeatherCell"
 
 class WeatherCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var weatherViewModel:WeatherViewModel?
-    var data = [DataViewModel]()
+    var weatherData : WeatherViewModel?
+    var weatherDailyData = [DailyDataViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,10 @@ class WeatherCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
     
     private func fetchData(){
         Service.sharedInstance.getDailyWeather(onSuccess: { (weathers) in
-            self.data = weathers.daily.data.map({return DataViewModel(data: $0)})
-            self.weatherViewModel = WeatherViewModel(weather: weathers)
-            self.title = self.weatherViewModel?.timezone
+            guard let data = weathers.dailyDatas else{return}
+            self.weatherDailyData = data.map({return DailyDataViewModel(dailyData: $0)})
+            self.weatherData = WeatherViewModel(weather: weathers)
+            self.title = self.weatherData?.timezone
             self.collectionView?.reloadData()
         }) { (error) in
             print(error)
@@ -54,13 +55,14 @@ extension WeatherCVC{
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.data.count
+        
+        return self.weatherDailyData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierForWeather, for: indexPath) as! WeatherCell
         
-        cell.resultData = data[indexPath.row]
+        cell.resultData = self.weatherDailyData[indexPath.row]
         return cell
     }
 }
