@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F45F69F2262387D00C45BFB /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F45F69E2262387D00C45BFB /* WeatherViewModel.swift */; };
+		5F7400D72277900200316E66 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7400D62277900200316E66 /* HTTPMethod.swift */; };
+		5F7400D92279DE1300316E66 /* UIUpdaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7400D82279DE1300316E66 /* UIUpdaterProtocol.swift */; };
 		5FD4A31E2258DAC100BE0019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4A31D2258DAC100BE0019 /* AppDelegate.swift */; };
 		5FD4A3262258DAC100BE0019 /* Weatherly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4A3242258DAC100BE0019 /* Weatherly.xcdatamodeld */; };
 		5FD4A3282258DAC100BE0019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD4A3272258DAC100BE0019 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		5F45F69E2262387D00C45BFB /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		5F7400D62277900200316E66 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5F7400D82279DE1300316E66 /* UIUpdaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUpdaterProtocol.swift; sourceTree = "<group>"; };
 		5FD4A31A2258DAC100BE0019 /* Weatherly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD4A31D2258DAC100BE0019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FD4A3252258DAC100BE0019 /* Weatherly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weatherly.xcdatamodel; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			children = (
 				5FF10D9D2276456B00F83280 /* APIConstants.swift */,
 				5FF10D9F2276462100F83280 /* APIRouter.swift */,
+				5F7400D62277900200316E66 /* HTTPMethod.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF10DA5227653EF00F83280 /* ServiceManagerProtocol.swift */,
+				5F7400D82279DE1300316E66 /* UIUpdaterProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -370,10 +376,12 @@
 			files = (
 				5FD4A353225BE2EE00BE0019 /* Extensions.swift in Sources */,
 				5FF10DA6227653EF00F83280 /* ServiceManagerProtocol.swift in Sources */,
+				5F7400D72277900200316E66 /* HTTPMethod.swift in Sources */,
 				5FF10DA3227651BA00F83280 /* DataStore.swift in Sources */,
 				5F45F69F2262387D00C45BFB /* WeatherViewModel.swift in Sources */,
 				5FD4A359225BEA8B00BE0019 /* Service.swift in Sources */,
 				5FD4A351225BE03A00BE0019 /* WeatherCell.swift in Sources */,
+				5F7400D92279DE1300316E66 /* UIUpdaterProtocol.swift in Sources */,
 				5FD4A3262258DAC100BE0019 /* Weatherly.xcdatamodeld in Sources */,
 				5FD4A34F225BDFF200BE0019 /* WeatherCVC.swift in Sources */,
 				5FF10D9E2276456B00F83280 /* APIConstants.swift in Sources */,
